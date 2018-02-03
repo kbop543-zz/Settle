@@ -3,12 +3,12 @@ import { AppRegistry, Text,View, StyleSheet, Button } from 'react-native';
 
 import {StackNavigator} from 'react-navigation';
 
-import ChatTest from './src/components/chattest.js';
-import HomeScreen from './src/components/homescreen.js';
+import ChatScreen from './src/screens/chatscreen.js';
+import HomeScreen from './src/screens/homescreen.js';
 
 const AppNavigator = StackNavigator({
   Home: {screen: HomeScreen},
-  ChatTest: { screen: ChatTest},
+  ChatScreen: { screen: ChatScreen},
 });
 
 export default class App extends Component {

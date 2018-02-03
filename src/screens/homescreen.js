@@ -16,9 +16,9 @@ export default class Home extends Component {
         <View style={styles.background} />
         <Text style={styles.settleText}>Settle </Text>
         <Button
-          title="Go to Jane's profile"
+          title="Next"
           onPress={() =>
-            this.props.navigation.navigate('ChatTest')
+            this.props.navigation.navigate('ChatScreen')
           }
         />
       </View>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Text,View} from 'react-native';
+import {Text,View, StyleSheet} from 'react-native';
 import {GiftedChat} from 'react-native-gifted-chat';
 
 import ChatController from '../controllers/chatcontroller.js';
 
-export default class Chat extends Component{
+export default class ChatScreen extends Component{
   state = {
     messages: []
   };
@@ -41,6 +41,6 @@ export default class Chat extends Component{
   }
 }
 
-Chat.defaultProps = {
+ChatScreen.defaultProps = {
   name: 'Cool Person!',
 }
