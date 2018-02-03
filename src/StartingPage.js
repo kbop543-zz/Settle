@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text,View, StyleSheet } from 'react-native';
-
+import Chat from './components/chat'
 
 export default class StartingPage extends Component {
+
+  constructor(props){
+   super(props);
+ }
+
+   componentDidMount(){
+     // Start counting when the page is loaded
+     this.timeoutHandle = setTimeout(()=>{
+          // Add your logic for the transition
+          this.setState({ component: <Chat /> })
+        }, 5000);
+      }
+
+      componentWillUnmount(){
+       clearTimeout(this.timeoutHandle);
+     }
+
+
   render() {
   return (
     <View style={{flex: 1}}>
