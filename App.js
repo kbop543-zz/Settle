@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text,View, StyleSheet } from 'react-native';
-import Chat from './components/chat'
+import Chat from './src/components/chat'
 
 export default class StartingPage extends Component {
 
