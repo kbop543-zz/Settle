@@ -3,15 +3,8 @@ import { AppRegistry, Text,View, StyleSheet, Button } from 'react-native';
 
 import {StackNavigator} from 'react-navigation';
 
-import ChatTest from './src/components/chattest.js';
-import HomeScreen from './src/components/homescreen.js';
 
-const AppNavigator = StackNavigator({
-  Home: {screen: HomeScreen},
-  ChatTest: { screen: ChatTest},
-});
-
-export default class App extends Component {
+export default class Home extends Component {
 
   constructor(props){
    super(props);
@@ -19,7 +12,17 @@ export default class App extends Component {
 
   render() {
     return (
-      <AppNavigator/>
+    <View style={{flex: 1}}>
+        <View style={styles.background} />
+        <Text style={styles.settleText}>Settle </Text>
+        <Button
+          title="Go to Jane's profile"
+          onPress={() =>
+            this.props.navigation.navigate('ChatTest')
+          }
+        />
+      </View>
+
   );
 }
 }
@@ -41,6 +44,3 @@ const styles = StyleSheet.create({
      backgroundColor: '#ABC4A1'
   },
 });
-
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('App', () => StartingPage);
